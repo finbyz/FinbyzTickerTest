@@ -1,0 +1,56 @@
+{
+  "name": "Finbyz",
+  "productName": "Finbyz",
+  "version": "1.9.0",
+  "description": "Window Application showing live market rate",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "dist": "build --arch=all",
+    "publish": "publish",
+    "release": "npm run dist && npm run publish"
+  },
+  "author": "Finbyz Tech Pvt Ltd",
+  "license": "ISC",
+  "private": true,
+  "build": {
+    "appId": "finbyz.Finbyz",
+    "appImage": {
+      "systemIntegration": "doNotAsk"
+    },
+    "files": [
+      "!publisher.json",
+      "!updates.json"
+    ],
+    "win": {
+      "target": ["squirrel"],
+      "icon": "public/media/png/favicon(1).ico"
+    },
+    "squirrelWindows": {
+      "iconUrl": "https://api.finbyz.com/static/img/favicon.ico",
+      "loadingGif": "public/media/png/finbyz_ticker.gif"
+    }
+  },
+  "updater": {
+    "url": "https://raw.githubusercontent.com/finbyz/FinbyzTickerTest/master/updates.json"
+  },
+  "engines": {
+    "node": ">=6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finbyz/FinbyzTickerTest.git"
+  },
+  "dependencies": {
+    "electron-simple-updater": "^1.5.0",
+    "request": "^2.88.0",
+    "ws": "^7.0.0"
+  },
+  "devDependencies": {
+    "electron": "*",
+    "electron-builder": "*",
+    "electron-simple-publisher": "*",
+    "electron-builder-squirrel-windows": "*"
+  }
+}

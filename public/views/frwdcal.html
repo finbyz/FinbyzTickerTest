@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body style="font-weight: none;font-size: 13px;padding: 3px;">
+	<form method="POST">
+		<table cellpadding="0" width="100%" cellspacing="0" class="calculator-table1">
+			<thead>
+				<tr style="background: #17446d;color: white;">
+					<th>Currency</th>
+					<th>Transaction</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="">
+						<select id="selectcurr" style="width: 100%;">
+						
+						</select>
+					</td>
+					<td>
+						<select style="width: 100%;" id="transaction">
+							<option value="import">Import</option>
+							<option value="export">Export</option>
+						</select>
+					</td>
+				</tr>
+				<tr style="background: #17446d;color: white;">
+					<th>Start Date:</th>
+					<th>End Date:</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="date" name="" id="sd">
+					</td>
+					<td>
+						<input type="date" name="" id="ed">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<center><label id="errormsg" style="color: red;margin: 0;"></label></center>
+		<center>
+			<button type="button" id="calculate">Calculate</button>
+		</center>
+
+		<center><table cellpadding="0" cellpadding="0" id="result">
+			<tbody style="font-weight: bolder;">
+				<tr align="center">
+					<td rowspan="2" style="background: #17446d;color: #fff;">Result</td>
+					<td>Forward point</td>
+					<td>Spot Rate</td>
+					<td>Forward Period</td>
+					<td>Forward Rate</td>
+				</tr>
+				<tr align="center" style="color:#17446d">
+					<td id="fp"></td>
+					<td id="sr"></td>
+					<td id="fwp"></td>
+					<td id="fr"></td>
+				</tr>
+			</tbody>
+		</table></center>
+	</form>
+	<script type="text/javascript" src="../js/fwdcal.js"></script>
+</body>
+</html>

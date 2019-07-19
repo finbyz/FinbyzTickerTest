@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<table cellpadding="0" width="100%" cellspacing="0" class="cashspot-cashtom">
+		<thead>
+			<tr>
+				<th align="center" colspan="2">Cash Spot</th>
+				<th align="center" colspan="2">Cash Tom</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr style="font-weight: bolder;background: #ddebf7;">
+				<td>Bid</td>
+				<td>Ask</td>
+				<td>Bid</td>
+				<td>Ask</td>
+			</tr>
+			<tr style="font-weight: bold;background: #ddebf7;">
+				<td id="cash_spot_bid"></td>
+				<td id="cash_spot_ask"></td>
+				<td id="cash_tom_bid"></td>
+				<td id="cash_tom_ask"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<label style="font-weight: bold;">Spot Date: </label><label id="spot_date"></label>
+				</td>
+				<td colspan="2">
+					<label style="font-weight: bold;">Tom Date: </label><label id="tom_date"></label>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table border="0" cellpadding="0" width="100%" cellspacing="0" class="frwdBking" id="frwdBking">
+		<thead>
+			<th>Month&nbsp;&nbsp;&nbsp;</th>
+			<th>B/A</th>
+			<th>Point</th>
+			<th>OutRight</th>
+			<th>%</th>
+		</thead>
+		<tbody align="center" style="font-weight: bolder;">
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-1'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p>
+						<span id='month-1-bid-point'></span><br>
+						<span id='month-1-ask-point'></span>
+					</p>
+				</td>
+				<td class="text-center">
+					
+						<p id='month-1-outright-bid'></p>
+						<p id='month-1-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p>
+						<span id='month-1-annual-bid'></span><br>
+						<span id='month-1-annual-ask'></span>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-2'></p>
+				</td>
+				<td class="text-center">
+						<p>B: </p>
+						<p>A: </p>
+					</td>
+				<td class="text-center">
+					<p id='month-2-bid-point'></p>
+					<p id='month-2-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-2-outright-bid'></p>
+					<p id='month-2-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-2-annual-bid'></p>
+					<p id='month-2-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-3'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-3-bid-point'></p>
+					<p id='month-3-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-3-outright-bid'></p>
+					<p id='month-3-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-3-annual-bid'></p>
+					<p id='month-3-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-4'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-4-bid-point'></p>
+					<p id='month-4-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-4-outright-bid'></p>
+					<p id='month-4-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-4-annual-bid'></p>
+					<p id='month-4-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-5'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-5-bid-point'></p>
+					<p id='month-5-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-5-outright-bid'></p>
+					<p id='month-5-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-5-annual-bid'></p>
+					<p id='month-5-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-6'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-6-bid-point'></p>
+					<p id='month-6-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-6-outright-bid'></p>
+					<p id='month-6-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-6-annual-bid'></p>
+					<p id='month-6-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-7'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-7-bid-point'></p>
+					<p id='month-7-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-7-outright-bid'></p>
+					<p id='month-7-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-7-annual-bid'></p>
+					<p id='month-7-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-8'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-8-bid-point'></p>
+					<p id='month-8-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-8-outright-bid'></p>
+					<p id='month-8-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-8-annual-bid'></p>
+					<p id='month-8-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-9'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-9-bid-point'></p>
+					<p id='month-9-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-9-outright-bid'></p>
+					<p id='month-9-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-9-annual-bid'></p>
+					<p id='month-9-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-10'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-10-bid-point'></p>
+					<p id='month-10-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-10-outright-bid'></p>
+					<p id='month-10-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-10-annual-bid'></p>
+					<p id='month-10-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-11'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-11-bid-point'></p>
+					<p id='month-11-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-11-outright-bid'></p>
+					<p id='month-11-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-11-annual-bid'></p>
+					<p id='month-11-annual-ask'></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-left">
+					<p class="pl-1" id='month-12'></p>
+				</td>
+				<td class="text-center">
+					<p>B: </p>
+					<p>A: </p>
+				</td>
+				<td class="text-center">
+					<p id='month-12-bid-point'></p>
+					<p id='month-12-ask-point'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-12-outright-bid'></p>
+					<p id='month-12-outright-ask'></p>
+				</td>
+				<td class="text-center">
+					<p id='month-12-annual-bid'></p>
+					<p id='month-12-annual-ask'></p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript" src="../js/fwd.js"></script>
+</body>
+</html>

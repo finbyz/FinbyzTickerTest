@@ -1,0 +1,266 @@
+*{
+	padding: 0;
+	margin: 0px;
+}
+body{
+	overflow: hidden;
+	font-family: sans-serif;
+}
+.right-align{
+	float: right;
+}
+
+/* Header start*/
+
+div.custom-titlebar{
+	padding: auto;
+	display: inline-block;
+	margin-top: 1px;
+}
+div.main-title .drag-bar{
+	-webkit-app-region: drag;
+	display: inline-block;
+	width: auto;
+	height: 30px;
+	top: 0;
+}
+.drag-bar-parent{
+	width: 121px;
+	float: left;
+	height: 30px;
+}
+div.main-title .reload {
+	display: inline-block;
+	padding: 2.5px 9px;
+	top: 0;
+	text-align: center;
+	color: #000;
+	animation: blinking_bg 1s infinite;
+	display: none;
+	
+}
+div.main-title .reload img {
+	margin-top: 5px;
+}
+div.reload.active{ 
+	display: initial;
+}
+div.main-title > .reload:hover{ 
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	background: #EDEDED; 
+}
+div.main-title > .drag-barlogin{
+	-webkit-app-region: drag;
+	display: inline-block;
+	width: 30%;
+	top: 0;
+	height: 32px;
+}
+
+div.custom-titlebar{
+	float: left;
+}
+div.custom-titlebar > a{
+	margin-left: 5px;
+	cursor: pointer;
+}
+div.main-title .close {
+	top: 0;
+	padding: 0px 3px;
+	text-align: center;
+	width: 30px;
+	color: #000;
+}
+div.main-title > .user {
+	padding: 3.5px 5px;
+	display: inline-block;
+	text-align: center;
+	top: 0;
+}
+.user img{
+	height: 15px;
+	width: 25px;
+}
+div.main-title > .user:hover{
+	background: #EDEDED;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+div.main-title > .user.active {
+	background: #EDEDED;
+}
+div.main-title > .close:hover {
+	background: rgb(220,20,60);
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+	color: #FFF;
+}
+div.main-title > .close > i {
+	font-size: 25px;
+}
+
+div.main-title > .minus {
+	top: 0;
+	padding: 0px 4px;
+	display: inline-block;
+	text-align: center;
+	width: 30px;
+	right: 5px;
+}
+div.main-title > .minus:hover {
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	background: #EDEDED;
+}
+div.main-title > .minus > i {
+	font-size: 25px;
+}
+/* Header end */
+div.menu-bar{
+	position: absolute;
+	background: #fff;
+	width: 52%;
+	margin: 1px 45%;
+	padding: 1px;
+	border: 1px solid;
+	box-shadow: 1px 5px 5px 0px rgba(23, 68, 109, 0.5);
+	display: none;
+	border-radius: 5%;
+}
+div.menu-bar.active{
+	display: block;
+	animation: fadein .5s;
+	animation-timing-function: ease-in;
+}
+div.menu-bar div.menuw-bar-item {
+	cursor: pointer;
+}
+div.setting-bar-item{
+	padding: 5px;
+	display: flex;
+	font-weight: bolder;
+}
+div.setting-bar-item  a{
+	padding-left: 5px;
+	text-decoration: none;
+}
+div.setting-bar-item:hover{
+	background: #EDEDED;
+	transition: 0.5s;
+}
+.window-container, .form-container{
+	width: 100%;
+	border: 0;
+	background: #f9f9f9;
+	height: 213px;
+}
+.form-container > table.currency-rate thead tr th , .form-container > table.currency-rate tbody tr td {
+	padding: 5px 0;
+	font-size: 13px;
+}
+table.currency-rate thead tr th:first-child{text-align: left;padding-left: 2px;}
+table.currency-rate thead tr th{text-align: center;}
+table.currency-rate > tbody tr:nth-child(even){background: #ddebf7;}
+table.currency-rate > tbody tr:nth-child(odd){background: #fff;}
+table.currency-rate > tbody tr a{color: #17446d;text-align: left;padding-left: 2px;}
+table.currency-rate{padding: 0px;}
+.currency-rate{
+	padding: 2px;
+}
+.text-center{
+	text-align: center;	
+}
+.currency-rate thead > tr th {
+	text-align: right;
+}
+.form-container > table.login-user td {
+	padding: 9px;
+}
+.form-container > table {
+	margin-right: 10.5px;
+}
+p{
+	margin-bottom: 3px;
+}
+input[type="text"] , input[type="password"] {
+	padding: 3px;
+	width: 100%;
+	color: #17446d;
+}
+.padding{
+	padding-left: 5px;
+}
+.bg-red{
+	color: red;
+	text-align: center;
+	transition: 0.2s ease-in-out;
+}
+.bg-green{
+	color: green;
+	text-align: center;
+	transition: 0.2s ease-in-out;
+}
+button{
+	padding: 3px 9px;
+	background: #17446d;
+	color: #fff;
+	border : 0px;
+}
+button:focus{
+	outline: 0;
+}
+a{
+	color: #17446d;
+	text-decoration: underline;
+	font-weight: bolder;
+	font-size: 12px;
+}
+a:hover{
+	cursor: pointer;
+}
+
+table.frwdBking{
+	font-size: 13px;
+	height: 20%;
+	padding:0px 2px;
+	margin-right: 2px;
+}
+table.frwdBking > thead th{background: #17446d;margin: auto;color: white;padding: 5px;}
+table.frwdBking > tbody tr:nth-child(even) {background: #fff;}
+table.frwdBking > tbody tr:nth-child(odd) {background: #ddebf7;}
+table.cashspot-cashtom{padding: 0px 2px; font-size: 13px;}
+table.cashspot-cashtom > thead th{background: #17446d;margin: auto;color: white;padding: 5px;}	
+table.cashspot-cashtom > tbody tr td{padding: 2px;text-align: center;}
+table.cashspot-cashtom > tbody {text-align: center;}
+table.calculator-table > thead tr th {padding: 3px;text-align: center;}
+table.calculator-table > tbody tr td {padding: 2px;}
+table.calculator-table > tbody {font-weight: bolder;text-align: center;}
+table.calculator-table > thead tr{background: #17446d;color: white;}
+table.calculator-table1 > thead tr th{text-align: center;padding: 5px;}
+table.calculator-table1 > tbody{text-align: center;}
+table.calculator-table1 > tbody tr td {padding-top: 5px;padding-bottom: 5px;}
+table.calculator-table1 > tbody tr th {text-align: center;padding: 5px;}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+#currencytable > tbody tr td {padding-top: 3.5px; padding-left: 10px;}
+#result{display: none;margin:0 auto;width: 100%;}
+#result > tbody tr td{padding: 5px;}
+.reloadblinking{
+  border-radius: 50%;
+}
+
+@keyframes blinking_bg {
+0%, 49% {
+    background-color: #EDEDED;
+}
+50%, 100% {
+    background-color: rgba(220,20,60,0.7);
+}
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body style="font-size: 12px;">
+<div class="main-title" style="margin-bottom: 0px;">
+	<div class="custom-titlebar" id="finbyz">
+		<a>
+			<img src="../media/png/Finbyz_Original_Wide.svg" height="25" width="100">
+		</a>	
+	</div>
+	<div class="drag-bar" id="drag-bar"></div>
+	<div class="close right-align" id="close" title="Close">
+			<i>&times;</i>
+		</div>
+		<div class="minus right-align" id="minus" title="Minimize">
+			<i>&minus;</i>
+		</div>
+		<div class="user right-align" id="user" title=""  style="text-align: center;">
+			<img src="../media/png/user-silhouette.svg" height="15" width="25" style="margin-top: 3px;">
+		</div>
+		<div class="reload right-align" id="reload"> 
+			<img src="../media/png/refreshing.png"  height="15" width="15" title="reload">
+		</div>
+	<div style="clear: both"></div>
+</div>
+<form method="POST" id="form">
+	<div class="menu-bar" id="menubar">
+		<div  class="menuw-bar-item" id="marketrate">
+			<div class="setting-bar-item">
+				<img src="../media/png/dollar-symbol.svg" height="15" width="25">
+				<a>Market Rate</a>
+			</div>
+		</div>
+		<div class="menuw-bar-item"s id="logout">
+			<div class="setting-bar-item">
+				<img src="../media/png/logout.svg" height="15" width="25">
+				<a>Logout</a>
+			</div>
+		</div>
+	</div>
+<div>
+	<table width="100%" cellspacing="0" cellpadding="0" id="currencytable">
+		<tbody style="font-weight: bolder;padding-left: 20px;">
+			
+		</tbody>
+	</table>
+		<center><button id="save">Save</button></center>
+</div>
+</form>
+<script type="text/javascript" src="../js/currency.js"></script>
+<script type="text/javascript" src="../js/operation.js"></script>
+</body>
+</html>

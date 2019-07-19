@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<div class="main-title" style="margin-bottom: -3px;">
+	<div class="custom-titlebar" id="finbyz">
+		<a>
+			<img src="../media/png/Finbyz_Original_Wide.svg" height="25" width="100">
+		</a>	
+	</div>
+	<div class="drag-bar-parent">
+		<div class="drag-bar" id="drag-bar"></div>
+		<div class="reload right-align" id="reload"> 
+			<img src="../media/png/refreshing.png"  height="15" width="15" title="reload">
+		</div>
+	</div>
+		<!-- Blinking  -->
+		<div class="close right-align" id="close" title="Close" style="text-align: center;">
+			<i>&times;</i>
+		</div>
+		<div class="minus right-align" id="minus" title="Minimize" style="text-align: center;">
+			<i>&minus;</i>
+		</div>
+		<div class="user right-align" id="user" title=""  style="text-align: center;">
+			<img src="../media/png/user-silhouette.svg" style="margin-top: 3px;">
+		</div>
+		
+	<div style="clear: both"></div>
+</div>
+<form method="POST">
+	<div class="menu-bar" id="menubar">
+		<div  class="menuw-bar-item" id="fwdcal">
+			<div class="setting-bar-item">
+				<img src="../media/png/calculator.svg" height="15" width="25">
+				<a>Forward Calculator</a>
+			</div>
+		</div>
+		<div class="menuw-bar-item" id="currency">
+			<div class="setting-bar-item">
+				<img src="../media/png/dollar-symbol.svg" height="15" width="25">
+				<a>Currency</a>
+			</div>
+		</div>	
+		<div class="menuw-bar-item"s id="logout">
+			<div class="setting-bar-item">
+				<img src="../media/png/logout.svg" height="15" width="25">
+				<a id="fullname"></a>
+			</div>
+		</div>
+	</div>
+	<div class="window-container" style="background: white;">
+		<div id='token' style="display: none;"></div>
+		<div class="form-container" style="background: white;">
+			<table width="100%" cellspacing="0" cellpadding="0" class="currency-rate" id="marketRate">
+				<thead>
+					<tr style="background: #17446d;color: white;">
+						<th>Currency</th>
+						<th>Bid</th> 
+						<th>Ask</th>
+						<th>High</th>
+						<th>Low</th>
+					</tr>
+				</thead>
+				<tbody style="font-weight: bolder;">
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+</form>
+
+</body>
+<script type="text/javascript" src="../js/dashboard.js"></script>
+<script type="text/javascript" src="../js/operation.js"></script>
+</html>
