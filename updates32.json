@@ -1,8 +1,0 @@
-{
-  "win32-x64-prod": {
-    "readme": "First release",
-    "update": "https://github.com/finbyz/FinbyzTicker/releases/download/win32-x64-prod-v1.7.0",
-    "install": "https://github.com/finbyz/FinbyzTicker/releases/download/win32-x64-prod-v1.7.0/Finbyz.Setup.1.7.0.exe",
-    "version": "1.7.0"
-  },
-}
