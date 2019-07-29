@@ -3,7 +3,7 @@ WebSocket = require('ws');
 const path = require('path');
 const fs = require('fs');
 const url  = require('url');
-const {ipcRenderer} = electron;
+const { ipcRenderer} = electron;
 const {BrowserWindow} = electron.remote;
 const sockets = {};
 var frwdBookingViewW = [];
@@ -11,7 +11,6 @@ var fwdcalarr = [];
 setTimeout(() => {
 	ipcRenderer.send('mrkt', true);
 },1000);
-
 ipcRenderer.on('marketCurrencyd', (e, detail) => {
 	document.getElementById("token").innerHTML = detail.token;
 	document.getElementById("user").title = detail.name;
@@ -105,7 +104,7 @@ function establish_ws_connection(currency, key) {
 		//console.log(`[error] ${error.message}`);
 		sockets[currency].close();
 	    document.getElementById("reload").className = "reload right-align active";
-	     document.getElementById("drag-bar").style.width = "80px";
+	    document.getElementById("drag-bar").style.width = "80px";
 	};
 
 	try{
@@ -249,4 +248,12 @@ document.getElementById("currency").addEventListener("click", (event) => {
 	}else{
 		offline();
 	}
+});
+electron.remote.powerMonitor.on('resume', () => {
+	reconnect_ws();
+	// console.log("Resume");
+});
+document.getElementById('minus').addEventListener("click" , () => {
+	// console.log("minus");
+	reconnect_ws();
 });
