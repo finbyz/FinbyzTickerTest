@@ -16,7 +16,7 @@ app.on("ready", () => {
 		    buttons: ["ok"],
 		    defaultId: 0,
 		    title: 'Finbyz Ticker Updated!',
-		    message: "v1.9.0",
+		    message: "v2.0.0",
 		    detail: 'Finbyz Ticker App Updated Successfully!',
 		  };
 
