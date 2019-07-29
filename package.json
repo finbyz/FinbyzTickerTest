@@ -1,7 +1,7 @@
 {
   "name": "Finbyz",
   "productName": "Finbyz",
-  "version": "1.10.0",
+  "version": "2.1.0",
   "description": "Window Application showing live market rate",
   "main": "main.js",
   "scripts": {
